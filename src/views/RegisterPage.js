@@ -1,8 +1,10 @@
 import React, { useMemo, useEffect, useState } from 'react'
-import bgImage from "../assets/img/thumbnail.svg"
+import fb from "../assets/logo/fb.png"
+import twitter from "../assets/logo/twitter.png"
+import linkedin from "../assets/logo/linkedin.webp"
+import Sidebar from "../containers/sidebar"
 import 'react-phone-input-2/lib/style.css'
 import PhoneInput from 'react-phone-input-2'
-import Sidebar from "../containers/sidebar"
 function RegisterPage() {
     const initialState = {
         fields: {},
@@ -27,13 +29,14 @@ function RegisterPage() {
     return (
         <div className="login-page">
             <div className="login-container">
-                <Sidebar />
+                <Sidebar image={""}/>
                 <div className="login-form">
+                <div style={{ width: "75%", textAlign: "left" }}>
+                        <p style={{ fontWeight: "bold", fontSize: "30px" }}>Register</p>
+                    </div>
                     <div className="signin-form">
-                        <h4 style={{ textAlign: "center" }}>Create your Account </h4>
-                        <hr width="100%" color="E8E8E8" align="left"></hr>
-                        <form className="form-signin mt-3" onSubmit={handleSubmit}>
-                            <div className=" col-md-12 mt-5 pl-0 pr-1" style={{ display: "flex" }} >
+                        <form className="form-signin " onSubmit={handleSubmit}>
+                            <div className=" col-md-12 mt-3 pl-0 pr-1" style={{ display: "flex" }} >
                                 <div className=" col-md-6" >
                                     First Name
                                 <input
@@ -111,18 +114,37 @@ function RegisterPage() {
                             <div className="col-md-12 mt-3 " style={{ display: "flex" }}>
                                 <div style={{ flex: "0.7" }}>
                                     <input type="checkbox" value="" />
-                                    <label className="ml-1">&nbsp; I accept the Terms & Conditions</label>
+                                    <label className="ml-1">&nbsp; I accept the <a href="#"><b>Terms & Conditions</b></a></label>
                                 </div>
                             </div>
 
                             <div className="col-md-12">
                                 <div className="col-md-12 button mt-4 mb-3" onClick={handleSubmit}>
-                                    <button className="button" style={{ borderRadius: "25px" }} type="submit">Sign up</button>
+                                    <button className="button" style={{ borderRadius: "25px" }} type="submit">Register</button>
                                 </div>
                                 <div className="mt-2 mb-2 ">Already have an account? <a href="#" style={{ color: "red", fontWeight: "bold" }}>Login</a> </div>
                             </div>
                         </form>
                     </div>
+                    <div className="signin-block">
+                        <div className="line-container mt-0" >
+                            <hr width="45%" color="E8E8E8" align="left"></hr>
+                                or
+                            <hr width="45%" color="E8E8E8" align="right"></hr>
+                        </div>
+                        <div className=" col-md-12 signin-option mt-0 mb-5">
+                            <div style={{ justifyContent: 'center' }}>
+                                Sign in with
+                        </div>
+                            <div >
+                                <img src={fb} width="40px" className="mr-2"></img>
+                                <img src={twitter} width="45px" className="mr-2"></img>
+                                <img src={linkedin} width="35px"></img>
+                            </div>
+                        </div>
+
+                    </div>
+               
                 </div>
             </div>
         </div>

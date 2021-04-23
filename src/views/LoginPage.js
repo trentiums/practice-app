@@ -24,28 +24,14 @@ function LoginPage() {
     return (
         <div className="login-page">
             <div className="login-container">
-                <Sidebar />
+                <Sidebar image={""} />
                 <div className="login-form">
-                    <div className="signin-block">
-                        <div className="signin-option">
-                            <div style={{ justifyContent: 'center' }}>
-                                Sign in with
-                        </div>
-                            <div >
-                                <img src={fb} width="40px" className="mr-2"></img>
-                                <img src={twitter} width="45px" className="mr-2"></img>
-                                <img src={linkedin} width="35px"></img>
-                            </div>
-                        </div>
-                        <div className="line-container mt-0" >
-                            <hr width="45%" color="E8E8E8" align="left"></hr>
-                                or
-                            <hr width="45%" color="E8E8E8" align="right"></hr>
-                        </div>
+                    <div style={{ width: "75%", textAlign: "left" }}>
+                        <p style={{ fontWeight: "bold", fontSize: "30px" }}>Login</p>
                     </div>
                     <div className="signin-form">
                         <form className="form-signin" onSubmit={handleSubmit}>
-                            <div className=" mt-3" >
+                            <div className="col-md-12 mt-3" >
                                 Email Address
                                 <input
                                     type="email"
@@ -57,7 +43,7 @@ function LoginPage() {
                                     onChange={(e) => handleChange(e, 'email')}
                                 />
                             </div>
-                            <div className=" mt-3">
+                            <div className="col-md-12 mt-3">
                                 Password
                                 <input
                                     type="password"
@@ -69,23 +55,41 @@ function LoginPage() {
                                     onChange={(e) => handleChange(e, 'password')}
                                 />
                             </div>
-                            <div className="mt-2 " style={{ display: "flex" }}>
+                            <div className="col-md-12 mt-2 " style={{ display: "flex" }}>
                                 <div style={{ flex: "0.7" }}>
                                     <input type="checkbox" value="" />
                                     <label className="ml-1">Remember me</label>
                                 </div>
                                 <div
                                     onClick={() => ""}
-                                    style={{ flex: "0.3", alignItems: 'center' }}
+                                    style={{ flex: "0.3", textAlign: 'right' }}
                                 >
                                     Forgot Password?
                             </div>
                             </div>
-                            <div className="button mt-3 " onClick={handleSubmit}>
+                            <div className="button mt-3 ml-3" onClick={handleSubmit}>
                                 <button className="button" style={{ borderRadius: "25px" }} type="submit">Login</button>
                             </div>
-                            <div className="mt-2 mb-2 ">Don't have an account? <a href="#" style={{ color: "red", fontWeight: "bold" }}>Register</a> </div>
+                            <div className="col-md-12 mt-2 mb-2 ">Don't have an account? <a href="#" style={{ color: "red", fontWeight: "bold" }}>Register</a> </div>
                         </form>
+
+                    </div>
+                    <div className="signin-block">
+                        <div className="line-container mt-0" >
+                            <hr width="45%" color="E8E8E8" align="left"></hr>
+                                or
+                            <hr width="45%" color="E8E8E8" align="right"></hr>
+                        </div>
+                        <div className=" col-md-12 signin-option mt-3">
+                            <div style={{ justifyContent: 'center' }}>
+                                Sign in with
+                        </div>
+                            <div >
+                                <img src={fb} width="40px" className="mr-2"></img>
+                                <img src={twitter} width="45px" className="mr-2"></img>
+                                <img src={linkedin} width="35px"></img>
+                            </div>
+                        </div>
 
                     </div>
                 </div>
