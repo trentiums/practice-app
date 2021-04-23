@@ -61,16 +61,15 @@ function LoginPage() {
                                     <label className="ml-1">Remember me</label>
                                 </div>
                                 <div
-                                    onClick={() => ""}
                                     style={{ flex: "0.3", textAlign: 'right' }}
                                 >
-                                    Forgot Password?
+                                  <a href="/forgotPassword">Forgot Password?</a>  
                             </div>
                             </div>
                             <div className="button mt-3 ml-3" onClick={handleSubmit}>
                                 <button className="button" style={{ borderRadius: "25px" }} type="submit">Login</button>
                             </div>
-                            <div className="col-md-12 mt-2 mb-2 ">Don't have an account? <a href="#" style={{ color: "red", fontWeight: "bold" }}>Register</a> </div>
+                            <div className="col-md-12 mt-2 mb-2 ">Don't have an account? <a href="/register" style={{ color: "red", fontWeight: "bold" }}>Register</a> </div>
                         </form>
 
                     </div>

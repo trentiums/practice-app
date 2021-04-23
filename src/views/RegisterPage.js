@@ -122,7 +122,7 @@ function RegisterPage() {
                                 <div className="col-md-12 button mt-4 mb-3" onClick={handleSubmit}>
                                     <button className="button" style={{ borderRadius: "25px" }} type="submit">Register</button>
                                 </div>
-                                <div className="mt-2 mb-2 ">Already have an account? <a href="#" style={{ color: "red", fontWeight: "bold" }}>Login</a> </div>
+                                <div className="mt-2 mb-2 ">Already have an account? <a href="/" style={{ color: "red", fontWeight: "bold" }}>Login</a> </div>
                             </div>
                         </form>
                     </div>
