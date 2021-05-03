@@ -16,7 +16,8 @@ function FPPage() {
         errors[field] = undefined
         setLoginDetails({ ...loginDetails, fields, errors })
     }
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault()
         setShow(true)
     }
 

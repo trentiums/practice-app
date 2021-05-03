@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import fb from "../assets/logo/fb.png"
-import twitter from "../assets/logo/twitter.png"
-import linkedin from "../assets/logo/linkedin.webp"
+import google from "../assets/logo/google-plus-circle.png"
+import apple from "../assets/logo/apple-logo.png"
 import Sidebar from "../containers/sidebar"
 
 function LoginPage() {
@@ -83,10 +83,10 @@ function LoginPage() {
                             <div style={{ justifyContent: 'center' }}>
                                 Sign in with
                         </div>
-                            <div >
+                            <div className="ml-3">
                                 <img src={fb} width="40px" className="mr-2"></img>
-                                <img src={twitter} width="45px" className="mr-2"></img>
-                                <img src={linkedin} width="35px"></img>
+                                <img src={google} width="39px" className="mr-2"></img>
+                                <img src={apple} width="45px"></img>
                             </div>
                         </div>
 
