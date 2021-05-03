@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
-import forgotPassword from "../assets/logo/forgot_password.png"
+import resetPassword from "../assets/logo/reset-password.png"
 import Sidebar from "../containers/sidebar"
-import FPModal from '../modals/FPModal'
-function FPPage() {
+function RPPage() {
     const initialState = {
         fields: {},
         errors: {},
@@ -22,45 +21,53 @@ function FPPage() {
 
     return (
         <div className="login-page">
-            <FPModal
-                isShow={isShow}
-                setShow={setShow}
-            />
             <div className="login-container">
                 <Sidebar image={""} />
                 <div className="login-form " >
                     <div style={{ width: "75%", textAlign: "left" }}>
-                        <p style={{ fontWeight: "bold", fontSize: "30px" }}>Forgot Passsword ?</p>
+                        <p style={{ fontWeight: "bold", fontSize: "30px" }}>Reset Passsword </p>
                     </div>
                     <div className="signin-block mt-4">
                         <div className="signin-option" style={{ flexDirection: "column" }}>
                             <div style={{ flex: "0.3" }}>
-                                <img src={forgotPassword} width="70%"></img>
+                                <img src={resetPassword} width="70%"></img>
                             </div>
                         </div>
                     </div>
                     <div className="signin-form" >
                         <div className="mt-3" style={{ fontSize: "15px", textAlign: "center" }}>
-                            Enter your registered email address below
+                            Add New Password 
                         </div>
-                        <div className="line-container mt-0" >
+                        {/* <div className="line-container mt-0" >
                             <hr width="100%" color="E8E8E8" align="left"></hr>
-                        </div>
+                        </div> */}
 
                         <form className=" form-signin" onSubmit={handleSubmit}>
                             <div className="col-md-12 mt-3" >
-                                Email Address
+                                Password
                                 <input
-                                    type="email"
-                                    id="email"
-                                    className={`mt-1 form-control${loginDetails?.errors?.email ? ' is-invalid' : ''}`}
-                                    placeholder="xyz@gmail.com"
+                                    type="password"
+                                    id="password"
+                                    className={`mt-1 form-control${loginDetails?.errors?.password ? ' is-invalid' : ''}`}
+                                    placeholder="Password"
                                     style={{ borderRadius: "25px", border: "3px solid rgb(233, 231, 231)" }}
-                                    value={loginDetails?.fields?.email || ''}
-                                    onChange={(e) => handleChange(e, 'email')}
+                                    value={loginDetails?.fields?.password || ''}
+                                    onChange={(e) => handleChange(e, 'password')}
                                 />
                             </div>
-                            <div className="col-md-12">
+                            <div className="col-md-12 mt-3" >
+                                Confirm Password
+                                <input
+                                    type="password"
+                                    id="cnfPwd"
+                                    className={`mt-1 form-control${loginDetails?.errors?.cnfPwd ? ' is-invalid' : ''}`}
+                                    placeholder="Confirm Password"
+                                    style={{ borderRadius: "25px", border: "3px solid rgb(233, 231, 231)" }}
+                                    value={loginDetails?.fields?.cnfPwd || ''}
+                                    onChange={(e) => handleChange(e, 'cnfPwd')}
+                                />
+                            </div>
+                           <div className="col-md-12">
                                 <div className=" button mt-4" style={{ display: "flex", justifyContent: "center" }}>
                                     <button className="button" type="submit" >Send</button>
                                 </div>
@@ -75,4 +82,4 @@ function FPPage() {
     )
 }
 
-export default FPPage
+export default RPPage
